@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Tia ArtiZana</title>
+  <meta name="description" content="Coopérative Tia ArtiZana — Artisanat malagasy fait main. Vannerie, crochet raphia, broderie, rabane, tressage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+.hero { margin-top: 76px; min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('images/hero.jpg') center/cover no-repeat; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(44,36,24,0.82) 0%, rgba(44,36,24,0.6) 40%, rgba(44,36,24,0.2) 100%); }
+.hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; width: 100%; }
+.hero-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); background: rgba(200,169,110,0.15); padding: 6px 16px; border: 1px solid rgba(200,169,110,0.3); margin-bottom: 1.8rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 500; line-height: 1.2; color: #fff; max-width: 600px; margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+.hero-slogan { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
+.hero p { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.75); max-width: 500px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+.cat-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
+.cat-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2rem 1.2rem; text-align: center; transition: all 0.4s; cursor: pointer; text-decoration: none; color: var(--text); }
+.cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(44,36,24,0.1); border-color: var(--accent); }
+.cat-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+.cat-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin-bottom: 0.4rem; }
+.cat-card p { font-size: 0.78rem; color: var(--text-light); font-weight: 300; }
+.cta-banner { background: var(--green); text-align: center; padding: 4rem 2rem; }
+.cta-banner h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; color: #fff; margin-bottom: 0.8rem; }
+.cta-banner p { color: rgba(255,255,255,0.7); font-weight: 300; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+@media (max-width: 768px) {
+  .hero { min-height: 75vh; }
+  .hero-bg::after { background: linear-gradient(to bottom, rgba(44,36,24,0.75) 0%, rgba(44,36,24,0.6) 100%); }
+  .cat-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Logo Tia ArtiZana">
+        <span class="logo-text"><span class="tia">Tia</span> <span class="arti">Arti</span><span class="zana">Zana</span></span>
+      </a>
+      <nav id="nav">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="boutique.html" >Boutique</a>
+        <a href="services.html" >Services</a>
+        <a href="apropos.html" >À propos</a>
+        <a href="contact.html" >Contact</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Coopérative — Antananarivo, Madagascar</div>
+      <h1>Sublimer l'artisanat Malagasy</h1>
+      <div class="hero-slogan">Unissons nos talents</div>
+      <p>Des créations uniques faites à la main par des artisans talentueux — tissage, crochet raphia, broderie, vannerie et création en rabane.</p>
+      <div class="hero-btns">
+        <a href="boutique.html" class="btn btn-accent">Découvrir nos créations</a>
+        <a href="contact.html" class="btn btn-outline-light">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="savoir-faire">
+    <div class="section-header">
+      <h2>Nos Savoir-faire</h2>
+      <div class="line"></div>
+      <p>Chaque technique est un héritage transmis de génération en génération</p>
+    </div>
+    <div class="cat-grid">
+      <a href="boutique.html" class="cat-card reveal"><div class="cat-icon">🧶</div><h3>Crochet</h3><p>Sacs et accessoires en raphia crocheté</p></a>
+      <a href="boutique.html" class="cat-card reveal"><div class="cat-icon">🌺</div><h3>Broderie</h3><p>Motifs floraux et traditionnels sur rabane</p></a>
+      <a href="boutique.html" class="cat-card reveal"><div class="cat-icon">🌿</div><h3>Création en Rabane</h3><p>Sacs et accessoires en fibres naturelles</p></a>
+      <a href="boutique.html" class="cat-card reveal"><div class="cat-icon">🪢</div><h3>Tressage</h3><p>Paniers et objets décoratifs tressés</p></a>
+      <a href="boutique.html" class="cat-card reveal"><div class="cat-icon">🧺</div><h3>Vannerie</h3><p>Corbeilles, dessous de plat et déco murale</p></a>
+    </div>
+  </section>
+
+  <section style="background: var(--bg-warm);">
+    <div class="section-header">
+      <h2>Sélection du moment</h2>
+      <div class="line"></div>
+      <p>Quelques-unes de nos pièces favorites</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-badge">Crochet</div>
+          <img src="images/crochet-sac.png" alt="Sac Zigzag" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Sac Zigzag</h3>
+          <div class="category">Crochet raphia</div>
+          <div class="desc">Sac et pochette assortis, motif zigzag multicolore</div>
+          <a href="mailto:tiaartizana@gmail.com?subject=Commande Sac Zigzag&body=Bonjour, je suis intéressé(e) par : Sac Zigzag" class="product-cta">
+            Commander <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-badge">Rabane</div>
+          <img src="images/rabane-sac.png" alt="Sac Savane" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Sac Savane</h3>
+          <div class="category">Création en rabane</div>
+          <div class="desc">Grand sac avec motif girafe et anses en cuir</div>
+          <a href="mailto:tiaartizana@gmail.com?subject=Commande Sac Savane&body=Bonjour, je suis intéressé(e) par : Sac Savane" class="product-cta">
+            Commander <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-badge">Broderie</div>
+          <img src="images/broderie-pochettes.png" alt="Pochettes Soleil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Pochettes Soleil</h3>
+          <div class="category">Broderie sur rabane</div>
+          <div class="desc">Trio de pochettes avec broderie tournesol</div>
+          <a href="mailto:tiaartizana@gmail.com?subject=Commande Pochettes Soleil&body=Bonjour, je suis intéressé(e) par : Pochettes Soleil" class="product-cta">
+            Commander <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-img">
+          <div class="product-badge">Vannerie</div>
+          <img src="images/vannerie-panier.png" alt="Panier Baobab" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Panier Baobab</h3>
+          <div class="category">Vannerie</div>
+          <div class="desc">Panier décoratif avec motif baobab peint</div>
+          <a href="mailto:tiaartizana@gmail.com?subject=Commande Panier Baobab&body=Bonjour, je suis intéressé(e) par : Panier Baobab" class="product-cta">
+            Commander <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="boutique.html" class="btn btn-outline">Voir toute la collection</a>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Commandes en gros & sur mesure</h2>
+    <p>Nous réalisons vos commandes personnalisées, en gros ou en détail. Contactez-nous pour discuter de votre projet.</p>
+    <a href="contact.html" class="btn btn-accent">Demander un devis</a>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Logo Tia ArtiZana">
+          <span>Tia ArtiZana</span>
+        </div>
+        <p>Coopérative d'artisanat malagasy. Unissons nos talents pour sublimer l'artisanat Malagasy.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="services.html">Services</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="mailto:tiaartizana@gmail.com">tiaartizana@gmail.com</a>
+        <a href="https://facebook.com/ArtiZana" target="_blank">Facebook: ArtiZana</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Coopérative Tia ArtiZana — Ankadimanga Itaosy, Antananarivo, Madagascar
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
